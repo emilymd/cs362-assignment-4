@@ -1,0 +1,367 @@
+/* Add additional stylesheets below
+-------------------------------------------------- */
+h1{
+    font-family: 'Luckiest Guy', cursive;
+    text-align: center;
+    font-size: 500%;
+}
+
+.shipleft img{
+    margin-left: 130px;
+    margin-top: -40px;
+
+}
+.shipright img{
+    margin-right: 130px;
+    margin-top: -40px;
+}
+
+.center {
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     width: 20%;
+}
+.sonarUnoccupied{
+     background-color: grey;
+}
+.sonarOccupied{
+    background-color: black;
+}
+.sonarCenter{
+    background-color: grey;
+}
+div#player.boardLabel{
+    font-family: 'Luckiest Guy', cursive;
+    position: absolute;
+    top: 120px;
+    left: 85px;
+    height: 70px;
+    width: 275px;
+    text-align: center;
+    font-size: 150%;
+
+
+}
+
+div#opponent.boardLabel{
+    font-family: 'Luckiest Guy', cursive;
+    position: absolute;
+    top: 120px;
+    right: 85px;
+    height: 70px;
+    width: 275px;
+    text-align: center;
+    font-size: 150%;
+
+}
+
+.battleGrid {
+    border: 1px solid black;
+    border-spacing: 0px;
+}
+
+.battleGrid tr {
+    border: 1px solid black;
+    height: 30px;
+}
+
+.battleGrid td {
+    border: 1px solid black;
+    width: 30px;
+}
+
+table#opponent.battleGrid{
+    position: absolute;
+    top: 200px;
+    right: 50px;
+}
+
+table#player.battleGrid{
+    position: absolute;
+    top: 200px;
+    left: 50px;
+}
+
+td:hover {
+    background-color: gray;
+}
+
+.placed {
+    background-color: gray;
+}
+
+.occupied {
+    background-color: black;
+}
+
+.hit {
+    background-color: orange;
+}
+
+.sunk {
+    background-color: red;
+}
+
+.miss {
+    background-color: blue;
+}
+
+.hidden {
+    background-color: white;
+}
+div#laserCodeEntry{
+   font-family: 'Schoolbell', cursive;
+   fontsize:100%;
+   border: 1px solid black;
+   width: 340px;
+   height:25px;
+   text-align: center;
+   top: 515px;
+   left: 50px;
+   position: absolute;
+}
+
+.laserhidden{
+    display: none;
+
+}
+
+#newGame {
+    font-family: 'Schoolbell', cursive;
+    font-size: 100%;
+    border: 1px solid black;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    height: 40px;
+    width: 100px;
+}
+
+div#InstructionsBox {
+    font-family: 'Schoolbell', cursive;
+    border: 1px solid black;
+    width: 630px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+div#InstructionsHeader {
+    font-family: 'Schoolbell', cursive;
+    background-color: orange;
+    padding: 6px;
+    text-align: center;
+}
+
+ol#InstructionsList {
+    font-family: 'Schoolbell', cursive;
+    padding-right: 30px;
+    font-size: 75%;
+}
+
+li#Space {
+    padding-bottom: 10px;
+}
+
+div#CompassHeader{
+   font-family: 'Schoolbell', cursive;
+   background-color: red;
+   padding: 6px;
+   text-align: center;
+}
+
+div#compass{
+   margin: auto;
+   border: 1px solid black;
+   width: 100px;
+   position: absolute;
+   margin-left: 440px;
+   text-align: center;
+   height: 130px;
+
+}
+
+div#legend {
+    font-family: 'Schoolbell', cursive;
+    margin: auto;
+    border: 1px black solid;
+    width: 250px;
+}
+
+div#title {
+    padding: 10px;
+    text-align: center;
+    background-color: skyblue;
+}
+
+ul.legendItems {
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
+
+div#grid-item-hit {
+    display: inline-grid;
+    border: 1px orange solid;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: orange;
+    margin-left: 47px;
+    margin-right: 30px;
+
+}
+
+div#grid-item-miss {
+    display: inline-grid;
+    border: 1px blue solid;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: blue;
+    margin-left: 19px;
+
+}
+
+div#grid-item-sunk {
+    display: inline-grid;
+    border: 1px red solid;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: red;
+    margin-left: 39px;
+    margin-right: 30px;
+
+}
+
+div#grid-item-ship {
+    display: inline-grid;
+    border: 1px black solid;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: black;
+    margin-left: 20px;
+
+}
+
+div#grid-item-none {
+    display: inline-grid;
+    border: 1px gray solid;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: gray;
+    margin-left: 18px;
+
+}
+
+li#legend-space {
+    padding-bottom: 10px;
+
+}
+
+#enemyKey {
+     top: 550px;
+     right: 75px;
+     width: 290px;
+     position: absolute;
+     border: 1px solid black;
+     font-family: 'Schoolbell', cursive;
+}
+
+#sonarButton {
+     font-family: 'Schoolbell', cursive;
+     top: 520px;
+     right: 135px;
+     width: 12%;
+     position: absolute;
+     border: 1px solid black;
+     text-align: center;
+
+}
+
+#shipKey {
+     font-family: 'Schoolbell', cursive;
+     top: 550px;
+     left: 75px;
+     width: 290px;
+     position: absolute;
+     border: 1px solid black;
+}
+
+#keyItems {
+     list-style-type: none;
+     padding-right: 2px;
+}
+
+.minesweepership {
+      padding-left: 30px;
+      margin-top: 15px;
+}
+
+.destroyership {
+      padding-left: 50px;
+      margin-top: 15px;
+}
+
+.battleshipship {
+      padding-left: 40px;
+      margin-top: 15px;
+}
+
+.submarineship {
+      padding-left: 40px;
+      margin-top: 10px;
+}
+
+.round {
+  position: relative;
+  top: 5px;
+}
+
+.round label {
+  background-color: #fff;
+  border: 1px solid gray;
+  border-radius: 50%;
+  cursor: pointer;
+  top: 5px;
+  height: 11px;
+  left: 2px;
+  position: absolute;
+  top: 0;
+  width: 11px;
+}
+
+.round label:after {
+  border: 2px solid #fff;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 6px;
+  top: 5px;
+  left: 4px;
+  opacity: 0;
+  position: absolute;
+  top: 8px;
+  transform: rotate(-45deg);
+  width: 12px;
+}
+
+.round input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.round input[type="checkbox"]:checked + label {
+  background-color: gray;
+  border-color: black;
+}
+
+.round input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
+
+

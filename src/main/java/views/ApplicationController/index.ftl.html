@@ -1,0 +1,116 @@
+<#import "../layout/defaultLayout.ftl.html" as layout>
+<@layout.myLayout "Home page">
+<link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Schoolbell" rel="stylesheet">
+<div class="shipleft">
+    <img src="assets/ship.jpg" alt ="rightship" width="170" height="100" align="left"/>
+</div>
+<div class="shipright">
+    <img src="assets/rightship.jpg" width="170" height="100" align="right"/>
+</div>
+
+<h1>BATTLESHIP</h1>
+<div style="display: flex; align-items: center;">
+    <button type="button" id="newGame" style="margin: auto; margin-top: -40px;" onclick="window.location.reload()"> NEW GAME </button>
+</div>
+
+<div id="InstructionsBox">
+    <div id="InstructionsHeader">Instructions:</div>
+    <ol id="InstructionsList">
+        <li id="Space">Set your ships! In the "Place Ships" box, place one ship of each type, and decide whether or not you want it to be vertical.</li>
+        <li id="Space">Attack your opponent's ships! Click on the opponent's grid to place your attack. See the legend to find out how you did.</li>
+        <li id="Space">CAPTAIN'S QUARTERS: All ships have a square called the Captain's Quarters. Hitting this square once on Minesweeper will instantly sink it. Hitting it twice on the other ships will instantly sink all the remaining squares of this ship!</li>
+        <li id="Space">SONAR PULSE: This allows you to reveal hidden ships! After you sink one ship, you're able to use this. Check the box and click a square to see if a ship is revealed (black square) or not (gray square). Careful, you may only use this twice a game!</li>
+        <li>Repeat until you win or lose! Click the NEW GAME button to start over and have fun!</li>
+    </ol>
+    <div id="laserActivationCode" class="laserhidden">        THE LASER ACTIVATION CODE IS: Activate Laser</div>
+</div>
+
+<div id="compass">
+    <div id="CompassHeader">Move My fleet!</div>
+    <button type="button">N &#8593;</button><br>
+    <button type="button">&#8592; W</button><button type="button">E &#8594;</button><br>
+    <button type="button">S &#8595;</button>
+</div>
+
+<table id="opponent" class="battleGrid">
+</table>
+
+<div id="sonarButton" align="right">
+    <input type="checkbox" align="middle" id="run_Sonar">Sonar Pulse!</input>
+</div>
+
+<div id="enemyKey">
+    <div id="title">ENEMY SHIPS</div>
+    <ul id="keyItems">
+        <li>MINESWEEPER<img src="assets/minesweeper.jpg" class="minesweepership" height="25" vertical-align="middle"></li>
+        <li>DESTROYER<img src="assets/destroyer.jpg" class="destroyership" height="25" vertical-align="middle"></li>
+        <li>BATTLESHIP<img src="assets/battleship.jpg" class="battleshipship" height="25" vertical-align="middle"></li>
+        <li>SUBMARINE<img src="assets/Submarine.jpg" class="submarineship" height="50" vertical-align="middle"></li>
+    </ul>
+</div>
+
+<div id="laserCodeEntry" class="laserhidden">
+    <form>
+        Activation Code:<input type="text" name="lasercode" id="laserText"><input type="submit" value= "Submit" id="laserCodeEntrySubmitButton">
+    </form>
+</div>
+<div id="legend">
+    <div id="title">LEGEND</div>
+    <ul class="legendItems">
+
+        <li id="legend-space">HIT    <div id="grid-item-hit"> </div> MISS   <div id="grid-item-miss"> </div> </li>
+        <!--<li id="legend-space">MISS   <div id="grid-item-miss"> </div> </li>-->
+        <li id="legend-space">SUNK   <div id="grid-item-sunk"> </div> SHIP   <div id="grid-item-ship"> </div></li>
+        <!--<li id="legend-space">SHIP   <div id="grid-item-ship"> </div> </li>-->
+        <li id="legend-empty">NO SHIP <div id="grid-item-none"> </div> </li>
+
+    </ul>
+</div>
+
+<img src="assets/shark.jpg" class="center"/>
+
+<table id="player" class="battleGrid">
+</table>
+
+<div id="shipKey">
+    <div id="title">PLACE SHIPS</div>
+    <ul id="keyItems">
+        <li><div class="container">
+            <div class="round">
+                <input type="checkbox" id="is_vertical">Place Vertically</input>
+                <label for="is_vertical"></label>
+            </div>
+        </div>
+        </li>
+        <li><input type="checkbox" id="place_minesweeper">MINESWEEPER</input><img src="assets/minesweeper.jpg" class="minesweepership" height="25" vertical-align="middle"></li>
+        <li><input type="checkbox" id="place_destroyer">DESTROYER</input><img src="assets/destroyer.jpg" class="destroyership" height="25" vertical-align="middle"></li>
+        <li><input type="checkbox" id="place_battleship">BATTLESHIP</input><img src="assets/battleship.jpg" class="battleshipship" height="25" vertical-align="middle"></li>
+        <li><input type="checkbox" id="place_submarine">SUBMARINE</input><img src="assets/Submarine.jpg" class="submarineship" height="50" vertical-align="middle"></li>
+        <li><div class="container">
+            <div class="round">
+                <input type="checkbox" id="is_submerged">Submerge Submarine</input>
+                <label for="is_submerged"></label>
+            </div>
+        </div>
+    </ul>
+</div>
+
+
+<div id="player" class="boardLabel">
+    <h2>You</h2>
+</div>
+
+<div id="opponent" class="boardLabel">
+    <h2>Enemy</h2>
+</div>
+<br>
+<br>
+<br>
+<br>
+<script type="text/javascript" src="/assets/game.js"></script>
+<script>
+    initGame();
+</script>
+
+</@layout.myLayout>
